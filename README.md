@@ -21,7 +21,6 @@
 - 浏览器渲染流程
 - 浏览器事件冒泡、事件捕捉、事件代理（e.stopPropagation、e.preventDefault）
 	- 无法捕捉的事件有哪些
-- cookie 的浏览器操作方法，服务器返回设计，传输方式
 - xss和csrf
 - dom和bom
 - 浏览器几种存储类型的比较和各自的特点（LocalStorage,SessionStorage,IndexedDB）
@@ -33,6 +32,7 @@
 - canvas 基本使用
 - XMLHttpRequest 的设计使用
 - 浏览器缓存（强缓存，对比缓存）
+- [x] [cookie](./cookie.md)
 
 ## CSS
 - a 标签的多种状态
@@ -48,7 +48,6 @@
 
 ## JS
 - 动态类型语言 JS 和静态类型语言 C++ 等区别和优缺点
-- Promise（源码解析和常考点）
 - requestAnimationFrame、animation（keyframes）
 - JS 中的节流和防抖
 - JS中的堆栈信息（堆栈的区别和常用的分配方式）
@@ -58,11 +57,13 @@
 - new、apply、bind、call 的模拟实现
 - 高阶函数，函数柯里化
 - constructor 中 super 的作用
-- 浮点数相加结果不精确（0.33 + 0.5 = 0.8300000000000001）（最大数）
 - JS 常用的设计模式
 - 对 URL 进行解析
 - [x] 模块系统(commonJS、AMD、CMD)
 - [x] JS中的 Error 类型，以及 Error 的三个属性
+- [x] [浮点数相加不准确](./浮点数相加不准确.md)
+- Promise（源码解析和常考点）
+- JS 中异步编程的几种形式
 
 ## PS
 - PNG、GIF、JPG 的区别和各自的概念
