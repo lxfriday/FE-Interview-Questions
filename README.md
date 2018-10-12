@@ -1,45 +1,102 @@
-# FE-Interview-Questions
+# 知识基础
 
-> 前端面试常考问题分类整理汇总 在线预览版 http://blog.poetries.top/FE-Interview-Questions
+## 前端
+- 前端性能问题如何排查
+	- 减少 reflow、repaint 提升性能
+	- 减少 DOM 操作，使用 documentFragment、div 操作好了之后再一次性添加到 DOM 中去
+	- 减少页面的 http 请求，将CSS JS 图片等静态资源打包
 
-[>> 面试问题答案综合版](https://github.com/poetries/FE-Interview-Questions/issues/2)
+## React
+- 数据双向绑定
+- 什么是 vdom
+- react高阶函数
+- React生命周期
+- Component and PureComponent
+- React事件系统
+- React + Redux + webpack 配置
+- ref 和 forwardRef
 
-目录
----
+## 浏览器
+- 浏览器从输入URL到页面渲染出来，所经历的过程
+- 浏览器渲染流程
+- 浏览器事件冒泡、事件捕捉、事件代理（e.stopPropagation、e.preventDefault）
+	- 无法捕捉的事件有哪些
+- cookie 的浏览器操作方法，服务器返回设计，传输方式
+- xss和csrf
+- dom和bom
+- 浏览器几种存储类型的比较和各自的特点（LocalStorage,SessionStorage,IndexedDB）
+- 浏览器 history API
+- 浏览器 location API
+- 浏览器 hash 相关的路由设计方法（对应SPA）
+- 前端性能优化、调优方案
+- https 相关详解
+- canvas 基本使用
+- XMLHttpRequest 的设计使用
+- 浏览器缓存（强缓存，对比缓存）
 
-- [HTML](HTML.md)
-- [CSS](CSS.md)
-- [JavaScript](JavaScript.md)
-- [jQuery](jQuery.md)
-- [Ajax](Ajax.md)
-- [HTTP](HTTP.md)
-- [Front-end-frame-relative](Front-end-frame-relative.md)
-- [Json-XML](Json-XML.md)
-- [localStorage](localStorage.md)
-- [mobile-terminal](mobile-terminal.md)
-- [Modules](Modules.md)
-- [performance-optimization](performance-optimization.md)
-- [PS](PS.md)
-- [SEO](SEO.md)
-- [ES6](ES6.md)
-- [cross-domain](cross-domain.md)
-- [cookie](cookie.md)
-- [MVC](MVC.md)
-- [Git](Git.md)
-- [data-structure](data-structure.md)
-- [dataBase](dataBase.md)
-- [Handwritten-code](Handwritten-code.md)
-- [computer-basic-knowledge](computer-basic-knowledge.md)
-- [other](other.md)
-- [comprehensive](comprehensive.md)
-- [vue](vue.md)
-- [react](react.md)
-- [MVVM](MVVM.md)
-- [浏览器](浏览器.md)
-- [性能](性能.md)
+## CSS
+- a 标签的多种状态
+- CSS 媒体查询
+- css盒子模型，边距重叠
+- 清除浮动
+- 浏览器中的各种长度单位(px、em、dp、rem、vmin)
+- display: box,flex等
+- CSS position 定位
+- scrollTop、offsetTop、clientHeight 等代表的意思
+- css 水平居中、垂直居中的多种常用方式
+- calc（React 例子源码中用到了）
 
-综合版本
----
+## JS
+- 动态类型语言 JS 和静态类型语言 C++ 等区别和优缺点
+- Promise（源码解析和常考点）
+- requestAnimationFrame、animation（keyframes）
+- JS 中的节流和防抖
+- JS中的堆栈信息（堆栈的区别和常用的分配方式）
+- 介绍原型链
+- 介绍继承
+- JS 事件循环
+- new、apply、bind、call 的模拟实现
+- 高阶函数，函数柯里化
+- constructor 中 super 的作用
+- 浮点数相加结果不精确（0.33 + 0.5 = 0.8300000000000001）（最大数）
+- JS 常用的设计模式
+- 对 URL 进行解析
+- [x] 模块系统(commonJS、AMD、CMD)
+- [x] JS中的 Error 类型，以及 Error 的三个属性
 
-- [Interview-Questions](Interview-Questions/Front-end-Developer-Questions[question-version].md)
-- [Front-end-Developer-Questions[question-and-answer-version]](Interview-Questions/Front-end-Developer-Questions[question-and-answer-version].md)
+## PS
+- PNG、GIF、JPG 的区别和各自的概念
+
+## NodeJs
+- 原生搭建基本的后端服务器
+- require 路径寻找的流程、原理
+- EventEmitter 模拟实现（完整版）
+
+## 小程序
+- 原生生命周期和 mpvue 生命周期
+- 小程序原生基本写法总结
+- 小程序数据绑定、视图渲染总结
+
+
+## 算法
+- 排序算法及优化算法
+- 二叉树的三种遍历及互推，使用代码实现
+- 二叉堆以及堆排序算法及其相关 [JS数据结构](http://caibaojian.com/learn-javascript.html)
+- avl、红黑树
+- 字符串大小写的所有组合（排列组合如何设计算法）
+
+## 网络
+- TCP/IP
+	- TCP 三次握手
+- HTTP
+	- Http 状态码
+	- Http 方法，PUT 和 POST 的区别
+	- RESTFul API的设计
+## Nginx
+
+
+## 计算机网络
+- [x] [进程线程及其区别](./进程线程.md)
+
+## Webpack
+- chunk 的切分原则
