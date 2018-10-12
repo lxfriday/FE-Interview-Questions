@@ -89,7 +89,7 @@
 - TCP/IP
 	- TCP 三次握手
 - HTTP
-	- Http 状态码
+	- [x] [HTTP 状态码](./HTTP状态码.md)
 	- Http 方法，PUT 和 POST 的区别
 	- RESTFul API的设计
 ## Nginx
