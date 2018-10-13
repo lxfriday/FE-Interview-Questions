@@ -51,18 +51,18 @@
 - requestAnimationFrame、animation（keyframes）
 - JS 中的节流和防抖
 - JS中的堆栈信息（堆栈的区别和常用的分配方式）
-- 介绍原型链
-- 介绍继承
 - JS 事件循环
-- new、apply、bind、call 的模拟实现
 - 高阶函数，函数柯里化
-- constructor 中 super 的作用
 - JS 常用的设计模式
 - 对 URL 进行解析
 - [x] 模块系统(commonJS、AMD、CMD)
 - [x] JS中的 Error 类型，以及 Error 的三个属性
 - [x] [浮点数相加不准确](./浮点数相加不准确.md)
-- Promise（源码解析和常考点）
+- [x] constructor 中 super 的作用
+- [x] new、apply、bind、call 的模拟实现
+- [x] 介绍原型链
+- [x] 介绍继承
+- [x] [Promise（源码解析和常考点）](./promise.md)
 - JS 中异步编程的几种形式
 
 ## PS
@@ -74,10 +74,7 @@
 - EventEmitter 模拟实现（完整版）
 
 ## 小程序
-- 原生生命周期和 mpvue 生命周期
-- 小程序原生基本写法总结
-- 小程序数据绑定、视图渲染总结
-
+- [x] [小程序相关](./小程序相关.md)
 
 ## 算法
 - 排序算法及优化算法
@@ -91,8 +88,9 @@
 	- TCP 三次握手
 - HTTP
 	- [x] [HTTP 状态码](./HTTP状态码.md)
-	- Http 方法，PUT 和 POST 的区别
+	- HTTPS 方法，PUT 和 POST 的区别
 	- RESTFul API的设计
+	- HTTPS 请求的连接过程
 ## Nginx
 
 
