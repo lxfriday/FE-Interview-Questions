@@ -70,8 +70,8 @@
 
 ## NodeJs
 - 原生搭建基本的后端服务器
-- require 路径寻找的流程、原理
-- EventEmitter 模拟实现（完整版）
+- [x] [require 路径寻找的流程、原理](http://www.ruanyifeng.com/blog/2015/05/require.html)
+- [x] [EventEmitter 模拟实现（完整版）]()
 
 ## 小程序
 - [x] [小程序相关](./小程序相关.md)
