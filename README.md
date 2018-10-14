@@ -14,6 +14,7 @@
 - Component and PureComponent
 - React事件系统
 - React + Redux + webpack 配置
+- Dva 架构
 - ref 和 forwardRef
 
 ## 浏览器
@@ -31,10 +32,11 @@
 - https 相关详解
 - canvas 基本使用
 - XMLHttpRequest 的设计使用
-- 浏览器缓存（强缓存，对比缓存）
+- [x] [浏览器缓存（强缓存，对比缓存）](./http缓存.md)
 - [x] [cookie](./cookie.md)
 
 ## CSS
+- CSS 选择器优先级
 - a 标签的多种状态
 - CSS 媒体查询
 - css盒子模型，边距重叠
@@ -45,8 +47,10 @@
 - scrollTop、offsetTop、clientHeight 等代表的意思
 - css 水平居中、垂直居中的多种常用方式
 - calc（React 例子源码中用到了）
+- CSS3 新增属性
 
 ## JS
+- 作用域链、执行上下文、VO 的创建
 - 动态类型语言 JS 和静态类型语言 C++ 等区别和优缺点
 - requestAnimationFrame、animation（keyframes）
 - JS 中的节流和防抖
@@ -55,6 +59,9 @@
 - 高阶函数，函数柯里化
 - JS 常用的设计模式
 - 对 URL 进行解析
+- 服务端渲染
+	- React 服务端渲染方案
+	- Vue 服务端渲染方案
 - [x] 模块系统(commonJS、AMD、CMD)
 - [x] JS中的 Error 类型，以及 Error 的三个属性
 - [x] [浮点数相加不准确](./浮点数相加不准确.md)
@@ -92,7 +99,6 @@
 	- RESTFul API的设计
 	- HTTPS 请求的连接过程
 ## Nginx
-
 
 ## 计算机网络
 - [x] [进程线程及其区别](./进程线程.md)
