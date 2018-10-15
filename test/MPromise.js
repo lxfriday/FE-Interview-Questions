@@ -23,7 +23,7 @@ class MPromise {
       }
     };
 
-    function reject(rejV) {
+    const reject = (rejV) => {
       if (this.$state !== MPromise._PENDING) return;
 
       this.$state = MPromise._REJECTED;
@@ -35,7 +35,7 @@ class MPromise {
     };
 
     try {
-      executor(resolve.bind(this), reject.bind(this));
+      executor(resolve, reject);
     } catch (err) {
       console.log('catch err => ', err);
       reject(err);
@@ -96,4 +96,3 @@ timeout(3000).then((t) => {
   console.log(t);
   return timeout(2000);
 }).then((t => console.log(t)));
- 
