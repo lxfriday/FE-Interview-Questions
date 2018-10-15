@@ -32,6 +32,7 @@
 - https 相关详解
 - canvas 基本使用
 - XMLHttpRequest 的设计使用
+- 跨域及 CORS 详解
 - [x] [浏览器缓存（强缓存，对比缓存）](./http缓存.md)
 - [x] [cookie](./cookie.md)
 
@@ -58,6 +59,8 @@
 - JS 事件循环
 - 高阶函数，函数柯里化
 - JS 常用的设计模式
+- JS 中的类型转换（null == undefined）
+	- [x] [ToPrimitive 类型转换](./toprimitive.md)
 - 对 URL 进行解析
 - 服务端渲染
 	- React 服务端渲染方案
