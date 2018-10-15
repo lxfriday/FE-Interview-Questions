@@ -1,3 +1,6 @@
+/**
+ * @doc http://es6.ruanyifeng.com/#docs/promise
+ */
 // 三种状态：PENDING、FULFILLED、REJECTED
 class MPromise {
   constructor(executor) {
