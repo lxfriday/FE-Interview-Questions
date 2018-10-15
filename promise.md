@@ -268,4 +268,4 @@ p.then(null, err => console.log('err => ', {
 
 ## 参考
 - [Promise 相关](https://github.com/lxfriday/lxfriday-frontend/blob/master/mypost/2018/08/07/about-promise.md)
-- [Promise 的模拟实现](https://github.com/lxfriday/lxfriday-frontend/blob/master/implementation/implementation-of-promise.js)
+- [Promise 的模拟实现](./implementations/MPromise.js)
