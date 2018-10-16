@@ -44,8 +44,9 @@ class MPromise {
   }
 
   then(onFulfilled, onRejected) {
-    onFulfilled = onFulfilled || (() => { });
-    onRejected = onRejected || (() => { });
+    // onFulfilled = onFulfilled || (() => { });
+    // onRejected = onRejected || (() => { });
+
     const ret = new MPromise((resolve, reject) => {
       const _onFulfilled = resV => {
         try {
@@ -74,9 +75,17 @@ class MPromise {
       };
 
       if (this.$state === MPromise._FULFILLED) {
-        _onFulfilled(this.$internalValue);
+        if (onFulfilled) {
+          _onFulfilled(this.$internalValue);
+        } else {
+          resolve(res);
+        }
       } else if (this.$state === MPromise._REJECTED) {
-        _onRejected(this.$internalValue);
+        if (onRejected) {
+          _onRejected(this.$internalValue);
+        } else {
+          reject(err);
+        }
       } else {
         this.$chained.push({
           onFulfilled: _onFulfilled,
@@ -84,6 +93,7 @@ class MPromise {
         });
       }
     });
+
     return ret;
   }
 
