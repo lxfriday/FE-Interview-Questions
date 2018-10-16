@@ -44,9 +44,6 @@ class MPromise {
   }
 
   then(onFulfilled, onRejected) {
-    // onFulfilled = onFulfilled || (() => { });
-    // onRejected = onRejected || (() => { });
-
     const ret = new MPromise((resolve, reject) => {
       const _onFulfilled = resV => {
         try {
@@ -82,6 +79,7 @@ class MPromise {
         }
       } else if (this.$state === MPromise._REJECTED) {
         if (onRejected) {
+          // 之前被 rejected ，则这一轮直接继续 rejected 传递下去，直到被 catch
           _onRejected(this.$internalValue);
         } else {
           reject(err);
