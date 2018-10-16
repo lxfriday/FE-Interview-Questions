@@ -1,4 +1,9 @@
 /**
+ * 模拟实现的 Promise
+ * 包含：then、catch、finally 三个原型方法，resolve、reject、all、race 四个静态方法
+ *
+ * @author lxfriday
+ * @email liu3248184446@outlook.com
  * @doc http://es6.ruanyifeng.com/#docs/promise
  */
 // 三种状态：PENDING、FULFILLED、REJECTED
@@ -99,6 +104,11 @@ class MPromise {
     return this.then(null, onRejected);
   }
 
+  /**
+   * finally 会执行一个函数，函数没有参数，同时会将前面 then 传递的状态和值往后面传递
+   *
+   * @param {function} cb 想要在 finally 里面执行的函数
+   */
   finally(cb) {
     const P = this.constructor;
     return this.then(
@@ -108,13 +118,25 @@ class MPromise {
   }
 }
 
-MPromise.resolve = function(resV) {
+MPromise.resolve = function (resV) {
   return new MPromise(res => res(resV));
-}
+};
 
 MPromise.reject = function (rejV) {
   return new MPromise((res, rej) => rej(rejV));
-}
+};
+
+MPromise.all = function (pa) {
+  let pc = MPromise.resolve(pa[0]);
+  const resArr = [];
+  for (let i = 1; i <= pa.length; i++) {
+    pc = pc.then((res) => {
+      resArr.push(res);
+      return pa[i];
+    });
+  }
+  return pc.then(() => resArr);
+};
 
 
 MPromise._PENDING = 'PENDING';
@@ -126,3 +148,8 @@ module.exports = MPromise;
 
 // typeof: number string boolean function object undefined symbol
 // base: number string boolean null undefined object symbol
+/**
+ * @TODO
+ * 1. Promise.all
+ * 2. Promise.race
+ */

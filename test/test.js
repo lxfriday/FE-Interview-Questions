@@ -1,9 +1,13 @@
 const MPromise = require('../implementations/MPromise');
 
 const timeout = (ms) => {
-  return new MPromise(function (res) {
+  return new MPromise(function (res, rej) {
     setTimeout(() => {
-      res(ms);
+      if (ms === 400) {
+        rej('400err')
+      } else {
+        res(ms);
+      }
     }, ms);
   });
 };
@@ -51,10 +55,27 @@ const timeout = (ms) => {
 // new MPromise((res, rej) => {
 //   res(1);
 // })
-MPromise.reject(1)
-  .then(d => d + 1)
-  .then(d => console.log(d))
-  .catch(err => console.log('handled error => ', err))
-  .then(() => 'go on')
-  .finally((data) => console.log('执行finally => ', data))
-  .then(d => console.log('finally 之前传递的值', d)); 
+//
+// MPromise.resolve(1)
+//   .then(() => dasfsdf)
+//   .then(d => d + 1)
+//   .then(d => console.log(d))
+//   .catch(err => console.log('handled error1111 => ', err))
+//   .then(() => 'go on')
+//   .then(d => {
+//     console.log(d);
+//     return dasdsa;
+//   })
+//   .then()
+//   .catch(err => console.log('handled error2222 => ', err))
+//   .then(d => console.log('', d))
+//   .finally((data) => console.log('执行finally => ', data))
+
+MPromise.all([
+  timeout(500),
+  timeout(600),
+  timeout(700),
+  timeout(400),
+]).then(data => {
+  console.log('这是结果', data)
+}).catch(err => console.log('出错了，被捕捉了', err));
