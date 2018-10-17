@@ -59,6 +59,7 @@
 - JS 事件循环
 - 高阶函数，函数柯里化
 - JS 常用的设计模式
+- JS 中的面向对象
 - JS 中的类型转换（null == undefined）
 	- [x] [ToPrimitive 类型转换](./toprimitive.md)
 - 对 URL 进行解析
@@ -75,16 +76,19 @@
 - [x] [Promise（源码解析和常考点）](./promise.md)
 - [x] [JS 中异步编程的几种形式](./js中的异步编程.md)
 
-## PS
-- PNG、GIF、JPG 的区别和各自的概念
-
 ## NodeJs
 - 原生搭建基本的后端服务器
 - [x] [require 路径寻找的流程、原理](http://www.ruanyifeng.com/blog/2015/05/require.html)
-- [x] [EventEmitter 模拟实现（完整版）]()
+- [x] [EventEmitter 模拟实现（完整版）](./implementations/eventemitter.js)
+
+## Webpack
+- chunk 的切分原则
 
 ## 小程序
 - [x] [小程序相关](./小程序相关.md)
+
+## PS
+- PNG、GIF、JPG 的区别和各自的概念
 
 ## 算法
 - 排序算法及优化算法
@@ -101,10 +105,8 @@
 	- HTTPS 方法，PUT 和 POST 的区别
 	- RESTFul API的设计
 	- HTTPS 请求的连接过程
-## Nginx
 
-## 计算机网络
+## 操作系统
 - [x] [进程线程及其区别](./进程线程.md)
 
-## Webpack
-- chunk 的切分原则
+## Nginx

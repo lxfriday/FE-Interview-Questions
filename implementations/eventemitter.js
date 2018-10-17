@@ -15,7 +15,7 @@ EventEmitter.prototype = {
     if (!this.tasks[name]) {
       this.tasks[name] = [];
     }
-    fn.tag = 'once'
+    fn.tag = 'once';
     this.tasks[name].push(fn);
     //this.tasks[name][this.tasks[name].length-1].tag = 'once';
   },
