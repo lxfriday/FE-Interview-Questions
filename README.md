@@ -18,7 +18,7 @@
 - ref 和 forwardRef
 
 ## 浏览器
-- 浏览器从输入URL到页面渲染出来，所经历的过程
+- [x] [浏览器从输入URL到页面渲染出来，所经历的过程](./从浏览器地址栏输入url到显示页面的步骤(以HTTP为例).md)
 - 浏览器渲染流程
 - 浏览器事件冒泡、事件捕捉、事件代理（e.stopPropagation、e.preventDefault）
 	- 无法捕捉的事件有哪些
