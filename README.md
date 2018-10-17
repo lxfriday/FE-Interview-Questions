@@ -50,7 +50,7 @@
 - CSS3 新增属性
 
 ## JS
-- [JS 语法基础]()
+- [JS 语法基础](./js-base.md)
 - 作用域链、执行上下文、VO 的创建
 - 动态类型语言 JS 和静态类型语言 C++ 等区别和优缺点
 - requestAnimationFrame、animation（keyframes）
