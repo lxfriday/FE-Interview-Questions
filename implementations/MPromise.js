@@ -49,14 +49,18 @@ class MPromise {
   }
 
   then(onFulfilled, onRejected) {
-    const ret = new MPromise((resolve, reject) => {
+    return new MPromise((resolve, reject) => {
       const _onFulfilled = resV => {
         try {
-          let res = onFulfilled(resV);
-          if (res instanceof MPromise) {
-            res.then(resolve);
+          if (onFulfilled) {
+            let res = onFulfilled(resV);
+            if (res instanceof MPromise) {
+              res.then(resolve, reject);
+            } else {
+              resolve(res);
+            }
           } else {
-            resolve(res);
+            resolve(resV);
           }
         } catch (err) {
           reject(err);
@@ -65,11 +69,17 @@ class MPromise {
 
       const _onRejected = rejV => {
         try {
-          let res = onRejected(rejV);
-          if (res instanceof MPromise) {
-            res.then(resolve);
+          // 添加了捕捉，则直接捕捉，再 resolve 到后面去
+          if (onRejected) {
+            let res = onRejected(rejV);
+            if (res instanceof MPromise) {
+              res.then(resolve);
+            } else {
+              resolve(res);
+            }
           } else {
-            resolve(res);
+            // 否则继续 reject ，直到被捕捉
+            reject(rejV);
           }
         } catch (err) {
           reject(err);
@@ -80,14 +90,14 @@ class MPromise {
         if (onFulfilled) {
           _onFulfilled(this.$internalValue);
         } else {
-          resolve(res);
+          resolve(this.$internalValue);
         }
       } else if (this.$state === MPromise._REJECTED) {
         if (onRejected) {
           // 之前被 rejected ，则这一轮直接继续 rejected 传递下去，直到被 catch
           _onRejected(this.$internalValue);
         } else {
-          reject(err);
+          reject(this.$internalValue);
         }
       } else {
         this.$chained.push({
@@ -96,8 +106,6 @@ class MPromise {
         });
       }
     });
-
-    return ret;
   }
 
   catch(onRejected) {
@@ -129,13 +137,16 @@ MPromise.reject = function (rejV) {
 MPromise.all = function (pa) {
   let pc = MPromise.resolve(pa[0]);
   const resArr = [];
+
   for (let i = 1; i <= pa.length; i++) {
     pc = pc.then((res) => {
       resArr.push(res);
       return pa[i];
     });
   }
-  return pc.then(() => resArr);
+
+  return pc
+    .then(() => resArr);
 };
 
 
@@ -150,6 +161,6 @@ module.exports = MPromise;
 // base: number string boolean null undefined object symbol
 /**
  * @TODO
- * 1. Promise.all
+ * 1. [x] Promise.all
  * 2. Promise.race
  */
