@@ -29,7 +29,6 @@
 - 浏览器 location API
 - 浏览器 hash 相关的路由设计方法（对应SPA）
 - 前端性能优化、调优方案
-- https 相关详解
 - canvas 基本使用
 - XMLHttpRequest 的设计使用
 - 跨域及 CORS 详解
@@ -71,6 +70,10 @@
 - [x] [浮点数相加不准确](./浮点数相加不准确.md)
 - [x] constructor 中 super 的作用
 - [x] new、apply、bind、call 的模拟实现
+    - [new](./implementations/new.js)
+    - [call](./implementations/call.js)
+    - [apply](./implementations/apply.js)
+    - [bind](./implementations/bind.js)
 - [x] 介绍原型链
 - [x] 介绍继承
 - [x] [Promise（源码解析和常考点）](./promise.md)
@@ -105,7 +108,6 @@
 	- HTTPS 方法，PUT 和 POST 的区别
 	- RESTFul API的设计
 	- HTTPS 请求的连接过程
-
 ## 操作系统
 - [x] [进程线程及其区别](./进程线程.md)
 
