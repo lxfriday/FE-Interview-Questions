@@ -126,14 +126,32 @@ class MPromise {
   }
 }
 
+/**
+ * 返回一个 resolve 状态的 Promise
+ *
+ * @param resV
+ * @returns {MPromise}
+ */
 MPromise.resolve = function (resV) {
   return new MPromise(res => res(resV));
 };
 
+/**
+ * 返回一个 reject 状态的 Promise
+ *
+ * @param rejV
+ * @returns {MPromise}
+ */
 MPromise.reject = function (rejV) {
   return new MPromise((res, rej) => rej(rejV));
 };
 
+/**
+ * 多任务串行执行，全部结束之后将结果传到后面
+ *
+ * @param pa
+ * @returns {MPromise}
+ */
 MPromise.all = function (pa) {
   const newPa = [].slice.call(pa).map(v => {
     if (v instanceof MPromise) {
@@ -156,6 +174,12 @@ MPromise.all = function (pa) {
     .then(() => resArr);
 };
 
+/**
+ * 并行调用，谁最先变化则传递谁
+ *
+ * @param pa
+ * @returns {MPromise}
+ */
 MPromise.race = function (pa) {
   const newPa = [].slice.call(pa).map(v => {
     if (v instanceof MPromise) {
@@ -170,18 +194,8 @@ MPromise.race = function (pa) {
   });
 };
 
-
 MPromise._PENDING = 'PENDING';
 MPromise._FULFILLED = 'FULFILLED';
 MPromise._REJECTED = 'REJECTED';
 
-
 module.exports = MPromise;
-
-// typeof: number string boolean function object undefined symbol
-// base: number string boolean null undefined object symbol
-/**
- * @TODO
- * 1. [x] Promise.all
- * 2. Promise.race
- */
