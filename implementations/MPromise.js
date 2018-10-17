@@ -135,18 +135,39 @@ MPromise.reject = function (rejV) {
 };
 
 MPromise.all = function (pa) {
-  let pc = MPromise.resolve(pa[0]);
+  const newPa = [].slice.call(pa).map(v => {
+    if (v instanceof MPromise) {
+      return v;
+    }
+    // 将不是 Promise 的参数转换成 Promise
+    return MPromise.resolve(v);
+  });
+  let pc = MPromise.resolve(newPa[0]);
   const resArr = [];
 
-  for (let i = 1; i <= pa.length; i++) {
+  for (let i = 1; i <= newPa.length; i++) {
     pc = pc.then((res) => {
       resArr.push(res);
-      return pa[i];
+      return newPa[i];
     });
   }
 
   return pc
     .then(() => resArr);
+};
+
+MPromise.race = function (pa) {
+  const newPa = [].slice.call(pa).map(v => {
+    if (v instanceof MPromise) {
+      return v;
+    }
+    // 将不是 Promise 的参数转换成 Promise
+    return MPromise.resolve(v);
+  });
+
+  return new MPromise((res, rej) => {
+    newPa.forEach(p => p.then(res, rej));
+  });
 };
 
 

@@ -11,17 +11,15 @@ const timeout = (ms) => {
   });
 };
 
-// Promise.all([
-//   timeout(500),
-//   timeout(300),
-//   timeout(600),
-//   timeout(400),
-// ]).then(data => {
-//   console.log('这是结果', data)
-// }, err => console.log('出错了，被捕捉了', err));
+function args() {
+  return arguments;
+}
 
-
-
-Promise.reject(1)
-  .then()
-  .then(data => console.log('data => ', data), data => console.log('rej => ', data));
+MPromise.race(args(
+  timeout(500),
+  timeout(700),
+  timeout(600),
+  timeout(400),
+)).then(data => {
+  console.log('这是结果', data)
+}, err => console.log('出错了，被捕捉了', err));
