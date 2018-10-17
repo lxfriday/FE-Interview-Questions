@@ -50,6 +50,7 @@
 - CSS3 新增属性
 
 ## JS
+- [JS 语法基础]()
 - 作用域链、执行上下文、VO 的创建
 - 动态类型语言 JS 和静态类型语言 C++ 等区别和优缺点
 - requestAnimationFrame、animation（keyframes）
@@ -68,7 +69,6 @@
 - [x] 模块系统(commonJS、AMD、CMD)
 - [x] JS中的 Error 类型，以及 Error 的三个属性
 - [x] [浮点数相加不准确](./浮点数相加不准确.md)
-- [x] constructor 中 super 的作用
 - [x] new、apply、bind、call 的模拟实现
     - [new](./implementations/new.js)
     - [call](./implementations/call.js)
@@ -78,6 +78,7 @@
 - [x] 介绍继承
 - [x] [Promise（源码解析和常考点）](./promise.md)
 - [x] [JS 中异步编程的几种形式](./js中的异步编程.md)
+
 
 ## NodeJs
 - 原生搭建基本的后端服务器
