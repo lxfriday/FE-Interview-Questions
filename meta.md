@@ -92,6 +92,7 @@ meta 标签的 http-equiv 属性语法格式是：＜meta http-equiv="参数" co
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 ```
 属性值
+
 |Value|可能值|描述|
 |:-:|:-:|:-:|
 |width|一个正整数或者字符串 `device-width` |定义视口宽度|
