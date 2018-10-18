@@ -7,14 +7,12 @@
 - [x] HTTP 请求头，TCP三次握手、四次挥手
 - 所有排序算法，快排优化和快排的栈实现
 - JS 中的面向对象
-- http-equiv
+- [x] http-equiv
 
 - 排序算法及优化算法
 - 二叉树的三种遍历及互推，使用代码实现
 - 二叉堆以及堆排序算法及其相关 [JS数据结构](http://caibaojian.com/learn-javascript.html)
 - avl、红黑树
-- 字符串大小写的所有组合（排列组合如何设计算法）
-
 
 ## 20181018
 - JS 中的堆栈
@@ -30,3 +28,7 @@
 - Component 和 PureComponent
 - DOM 和 BOM
 - JS 中的类型转换
+- XMLHttpRequest
+
+## later
+- [`<link>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/link#attr-href)
