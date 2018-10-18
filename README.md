@@ -86,6 +86,7 @@
 - [x] [EventEmitter 模拟实现（完整版）](./implementations/eventemitter.js)
 
 ## Webpack
+- [x] [React 开发脚手架（React + Redux + Webpack）](./democode/react)
 - chunk 的切分原则
 
 ## 小程序
