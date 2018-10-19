@@ -1,6 +1,6 @@
 # 知识基础
 
-## 前端
+## 性能优化
 - 前端性能问题如何排查
     - 减少 reflow、repaint 提升性能
     - 减少 DOM 操作，使用 documentFragment、div 操作好了之后再一次性添加到 DOM 中去
