@@ -2,9 +2,9 @@
 
 ## 前端
 - 前端性能问题如何排查
-	- 减少 reflow、repaint 提升性能
-	- 减少 DOM 操作，使用 documentFragment、div 操作好了之后再一次性添加到 DOM 中去
-	- 减少页面的 http 请求，将CSS JS 图片等静态资源打包
+    - 减少 reflow、repaint 提升性能
+    - 减少 DOM 操作，使用 documentFragment、div 操作好了之后再一次性添加到 DOM 中去
+    - 减少页面的 http 请求，将CSS JS 图片等静态资源打包
 
 ## React
 - 数据双向绑定
@@ -21,7 +21,7 @@
 - [x] [浏览器从输入URL到页面渲染出来，所经历的过程](./从浏览器地址栏输入url到显示页面的步骤(以HTTP为例).md)
 - 浏览器渲染流程
 - 浏览器事件冒泡、事件捕捉、事件代理（e.stopPropagation、e.preventDefault）
-	- 无法捕捉的事件有哪些
+	  - 无法捕捉的事件有哪些
 - xss和csrf
 - dom和bom
 - 浏览器几种存储类型的比较和各自的特点（LocalStorage,SessionStorage,IndexedDB）
@@ -63,12 +63,15 @@
 - 高阶函数，函数柯里化
 - JS 常用的设计模式
 - JS 中的面向对象
+    - [JS 中的继承](./js中的继承.md)
+    - [JS 中对象的创建](./js中对象的创建.md)
+    - [`Object.create` 详解](./implementations/Object.create.js)
 - JS 中的类型转换（null == undefined）
-	- [x] [ToPrimitive 类型转换](./toprimitive.md)
+	  - [x] [ToPrimitive 类型转换](./toprimitive.md)
 - 对 URL 进行解析
 - 服务端渲染
-	- React 服务端渲染方案
-	- Vue 服务端渲染方案
+    - React 服务端渲染方案
+    - Vue 服务端渲染方案
 - [x] 模块系统(commonJS、AMD、CMD)
 - [x] JS中的 Error 类型，以及 Error 的三个属性
 - [x] [浮点数相加不准确](./浮点数相加不准确.md)
@@ -78,7 +81,6 @@
     - [apply](./implementations/apply.js)
     - [bind](./implementations/bind.js)
 - [x] 介绍原型链
-- [x] 介绍继承
 - [x] [Promise（源码解析和常考点）](./promise.md)
 - [x] [JS 中异步编程的几种形式](./js中的异步编程.md)
 
@@ -107,12 +109,13 @@
 
 ## 网络
 - TCP/IP
-	- [x] [TCP 三次握手、四次挥手](./tcp.md)
+	  - [x] [TCP 三次握手、四次挥手](./tcp.md)
 - HTTP
-	- [x] [HTTP 状态码](./HTTP状态码.md)
-	- HTTPS 方法，PUT 和 POST 的区别
-	- RESTFul API的设计
-	- HTTPS 请求的连接过程
+    - [x] [HTTP 状态码](./HTTP状态码.md)
+    - HTTPS 方法，PUT 和 POST 的区别
+    - RESTFul API的设计
+    - HTTPS 请求的连接过程
+
 ## 操作系统
 - [x] [进程线程及其区别](./进程线程.md)
 

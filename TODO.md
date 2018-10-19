@@ -7,6 +7,7 @@
 - [x] HTTP 请求头，TCP三次握手、四次挥手
 - 所有排序算法，快排优化和快排的栈实现
 - JS 中的面向对象
+- 发布订阅和事件监听的区别
 - [x] http-equiv
 
 - 排序算法及优化算法
@@ -32,3 +33,4 @@
 
 ## later
 - [`<link>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/link#attr-href)
+- [JS指南 MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide)
