@@ -113,6 +113,7 @@
 	  - [x] [TCP 三次握手、四次挥手](./tcp.md)
 - HTTP
     - [x] [HTTP 状态码](./HTTP状态码.md)
+    - HTTP 头部信息
     - HTTPS 方法，PUT 和 POST 的区别
     - RESTFul API的设计
     - HTTPS 请求的连接过程
