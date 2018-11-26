@@ -32,6 +32,7 @@
 - canvas 基本使用
 - XMLHttpRequest 的设计使用
 - 跨域及 CORS 详解
+    - [x] [跨域解决方案](cross-origin/跨域解决方案.md)
 - [x] [浏览器缓存（强缓存，对比缓存）](./http缓存.md)
 - [x] [cookie](./cookie.md)
 
@@ -53,7 +54,10 @@
 - CSS3 新增属性
 
 ## JS
-- [JS 语法基础](./js-base.md)
+- 正则表达式
+    - [x] [一张图看懂正则表达式](./一张图看懂正则表达式.gif)
+    - [x] [`String.prototype.replace`]()
+- [x] [JS 语法基础](./js-base.md)
 - 作用域链、执行上下文、VO 的创建
 - 动态类型语言 JS 和静态类型语言 C++ 等区别和优缺点
 - requestAnimationFrame、animation（keyframes）
@@ -64,15 +68,22 @@
 - JS 设计模式
     - [观察者模式和发布订阅模式有什么不同](./观察者模式和发布订阅模式有什么不同.md)
 - JS 中的面向对象
-    - [JS 中的继承](./js中的继承.md)
-    - [JS 中对象的创建](./js中对象的创建.md)
-    - [`Object.create` 详解](./implementations/Object.create.js)
+    - [x] [关于 `class`](./about-class.md)
+    - [x] [JS 中多种继承方式](./js中多种继承方式.md)
+    - [x] [`extends` 继承及其相关](./extends继承及其相关.md)
+    - [x] [JS 中对象的创建](./js中对象的创建.md)
+    - [x] [`Object.create` 详解](./implementations/Object.create.js)
 - JS 中的类型转换（null == undefined）
 	  - [x] [ToPrimitive 类型转换](./toprimitive.md)
 - 对 URL 进行解析
 - 服务端渲染
     - React 服务端渲染方案
     - Vue 服务端渲染方案
+- [x] [onclick、addEventListener、attachEvent 比较](./onclick-addeventlistener-attachevent.md)
+- [x] [instance 输出结果的判断依据](./how-to-judge-the-result-of-instance.md)
+- [x] [为什么表达式语句不能以大括号或 function 开头({}.toString() 报错原因)](./why-expression-cannot-start-with-function-or-curly-braces.md)
+- [x] [JS 继承的多种方式及优缺点](./js继承的多种方式及优缺点.md)
+- [x] [JS 创建对象的多种方式以及优缺点](./js创建对象的多种方式以及优缺点.md)
 - [x] 模块系统(commonJS、AMD、CMD)
 - [x] JS中的 Error 类型，以及 Error 的三个属性
 - [x] [浮点数相加不准确](./浮点数相加不准确.md)
@@ -82,7 +93,9 @@
     - [apply](./implementations/apply.js)
     - [bind](./implementations/bind.js)
 - [x] 介绍原型链
-- [x] [Promise（源码解析和常考点）](./promise.md)
+- Promise
+    - [x] [Promise（源码解析和常考点）](./promise/promise.md) 
+    - [x] [Promise/A+ 规范](./promise/promise_A+规范.md)
 - [x] [JS 中异步编程的几种形式](./js中的异步编程.md)
 
 
